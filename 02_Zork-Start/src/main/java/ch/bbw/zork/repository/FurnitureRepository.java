@@ -6,12 +6,21 @@ import ch.bbw.zork.models.ItemModel;
 import java.util.ArrayList;
 
 public class FurnitureRepository {
-    private  static ArrayList<FurnitureModel> allFurniture = new ArrayList<>();
-    public static ArrayList<FurnitureModel> getInitiationChamberList(){
+    private static ArrayList<FurnitureModel> allFurniture = new ArrayList<>();
+
+    public static ArrayList<FurnitureModel> getInitiationChamberList() {
         ArrayList<FurnitureModel> initiationChamberList = new ArrayList<>();
-        FurnitureModel  drawer= FurnitureModel.builder().id(1).name("drawer").description("not locked drawer ").itemInSide(1).build();
+        FurnitureModel drawer = FurnitureModel.builder().id(1).name("drawer").description("not locked drawer with").itemInSide(1).build();
         allFurniture.add(drawer);
         initiationChamberList.add(drawer);
         return initiationChamberList;
+    }
+
+    public static ArrayList<FurnitureModel> getFirstSteps() {
+        ArrayList<FurnitureModel> firstStepsList = new ArrayList<>();
+        FurnitureModel drawer = FurnitureModel.builder().id(1).name("cupboard").description("not locked cupboard with").itemToOpen(4123).itemInSide(3).build();
+        allFurniture.add(drawer);
+        firstStepsList.add(drawer);
+        return firstStepsList;
     }
 }
