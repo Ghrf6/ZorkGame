@@ -8,6 +8,7 @@ import java.util.UUID;
 @Data
 @Builder
 public class ItemModel {
+    boolean visible;
     Integer id ;
     String name;
     String description;

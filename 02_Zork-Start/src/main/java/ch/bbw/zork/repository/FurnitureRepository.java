@@ -23,4 +23,11 @@ public class FurnitureRepository {
         firstStepsList.add(drawer);
         return firstStepsList;
     }
+    public static ArrayList<FurnitureModel> getPathOfChoice() {
+        ArrayList<FurnitureModel> firstStepsList = new ArrayList<>();
+        FurnitureModel drawer = FurnitureModel.builder().id(1).name("painting").description("its a painting with a hole inside").itemToOpen(4).itemInSide(5).build();
+        allFurniture.add(drawer);
+        firstStepsList.add(drawer);
+        return firstStepsList;
+    }
 }
